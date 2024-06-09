@@ -20,7 +20,7 @@ public class ArraysNotCollection {
 		}
 		
 		
-		double[] darr;//альтернативный синтаксис объявления
+		double[] darr;//альтернативный синтаксис объявления  
 	}
 	
 
