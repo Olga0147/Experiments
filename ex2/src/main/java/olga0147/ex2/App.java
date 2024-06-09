@@ -8,6 +8,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	PrimitiveTypes pt = new PrimitiveTypes();
+    	//pt.run();
+    	Literals ls = new Literals();
+    	//ls.run();
+    	ArraysNotCollection anc = new ArraysNotCollection();
+    	anc.run();
+    	
+    	//System.out.println( "Hello World!" );
     }
 }
