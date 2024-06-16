@@ -14,6 +14,8 @@ public class App
     	//ls.run();
     	ArraysNotCollection anc = new ArraysNotCollection();
     	anc.run();
+    	Methods m = new Methods();
+    	//m.run();
     	
     	//System.out.println( "Hello World!" );
     }

@@ -12,15 +12,25 @@ public class ArraysNotCollection {
 		float farr[][] = new float[10][5];//объявление + выделение памяти
 		
 		short sarr[][] = {{1,1,1} ,{2,2}};//через инициализацию
-		for(int i = 0; i < sarr.length; i++) {
+		
+		for(int i = 0; i < sarr.length; i++) {//итареция через for
 			for(int j = 0; j<sarr[i].length; j++) {
 				System.out.print( sarr[i][j] + " ");
 			}
 			System.out.println();
 		}
-		
+				
+		for(short i[] : sarr) {//итареция через for в стиле foreach
+			for(short j : i) {
+				System.out.print( j + " ");
+			}
+			System.out.println();
+		}
 		
 		double[] darr;//альтернативный синтаксис объявления  
+		
+		
+		
 	}
 	
 
