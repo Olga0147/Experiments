@@ -13,9 +13,11 @@ public class App
     	Literals ls = new Literals();
     	//ls.run();
     	ArraysNotCollection anc = new ArraysNotCollection();
-    	anc.run();
+    	//anc.run();
     	Methods m = new Methods();
     	//m.run();
+    	WrappedTypes wt = new WrappedTypes();
+    	wt.run();
     	
     	//System.out.println( "Hello World!" );
     }
