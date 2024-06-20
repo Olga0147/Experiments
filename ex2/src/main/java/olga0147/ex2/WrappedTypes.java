@@ -3,6 +3,15 @@ package olga0147.ex2;
  * Wrapper classes are the most used classes in a Java application, similar to String class. 
  * Fortunately, similar to String class, wrapper classes are immutable in Java. 
  * So, like string pool, we can also have their pool as well.
+ * 
+ * Boolean -- две public static final переменные
+ * Byte.ByteCache
+ * Short.ShortCache
+ * Character.CharacterCache
+ * Integer.IntegerCache
+ * Long.LongCache
+ * Float -- нет кеша
+ * Double -- нет кеша
  */
 public class WrappedTypes {
 
@@ -10,8 +19,14 @@ public class WrappedTypes {
 	public void run() {
 		
 		boolEq();
-		intEq();
+		byteEq();
 		shorEq();
+		charEq();
+		intEq();
+		longEq();
+		floEq();
+		doubleEq();
+		autoPacking();
 	}
 	
 	
@@ -31,6 +46,30 @@ public class WrappedTypes {
 		}
 		if(b1.compareTo(b2) == 0) {
 			System.out.println("b1.compareTo(b2) == 0");
+		}
+	}
+	
+	private void byteEq() {
+		System.out.println("-----------------------------Byte");
+		Byte b1 = 127;
+		Byte b2 = 127;
+		
+		if(b1.equals(b2)) {
+			System.out.println("b1.equals(b2)");
+		}
+		if(b1 == b2) {
+			System.out.println("b1 == b2");
+		}
+		if(b1.hashCode() == b2.hashCode()) {
+			System.out.println("b1.hashCode() == b2.hashCode()");
+		}
+		if(b1.compareTo(b2) == 0) {
+			System.out.println("b1.compareTo(b2) == 0");
+		}
+		
+		Integer i2 = 127;
+		if(b1.hashCode() == i2.hashCode()) {
+			System.out.println("b1.hashCode() == i2.hashCode(), b1.hashCode()=" + b1.hashCode());
 		}
 	}
 	
@@ -109,4 +148,130 @@ public class WrappedTypes {
 		}
 		
 	}
+
+	private void charEq() {
+		System.out.println("-----------------------------Character");
+		Character b1 = 127;
+		Character b2 = 127;
+		
+		if(b1.equals(b2)) {
+			System.out.println("b1.equals(b2)");
+		}
+		if(b1 == b2) {
+			System.out.println("b1 == b2");
+		}
+		if(b1.hashCode() == b2.hashCode()) {
+			System.out.println("b1.hashCode() == b2.hashCode()");
+		}
+		if(b1.compareTo(b2) == 0) {
+			System.out.println("b1.compareTo(b2) == 0");
+		}
+		
+		Integer i2 = 127;
+		if(b1.hashCode() == i2.hashCode()) {
+			System.out.println("b1.hashCode() == i2.hashCode(), b1.hashCode()=" + b1.hashCode());
+		}
+	}
+	
+	private void longEq() {
+		System.out.println("-----------------------------Long");
+		Long b1 = 127L;
+		Long b2 = 127L;
+		
+		if(b1.equals(b2)) {
+			System.out.println("b1.equals(b2)");
+		}
+		if(b1 == b2) {
+			System.out.println("b1 == b2");
+		}
+		if(b1.hashCode() == b2.hashCode()) {
+			System.out.println("b1.hashCode() == b2.hashCode()");
+		}
+		if(b1.compareTo(b2) == 0) {
+			System.out.println("b1.compareTo(b2) == 0");
+		}
+		
+		Integer i2 = 127;
+		if(b1.hashCode() == i2.hashCode()) {
+			System.out.println("b1.hashCode() == i2.hashCode(), b1.hashCode()=" + b1.hashCode());
+		}
+	}
+	
+	private void floEq() {
+		System.out.println("-----------------------------Float");
+		Float b1 = 127F;
+		Float b2 = 127F;
+		
+		if(b1.equals(b2)) {
+			System.out.println("b1.equals(b2)");
+		}
+		if(b1 == b2) {
+			System.out.println("b1 == b2");
+		}
+		if(b1.hashCode() == b2.hashCode()) {
+			System.out.println("b1.hashCode() == b2.hashCode()");
+		}
+		if(b1.compareTo(b2) == 0) {
+			System.out.println("b1.compareTo(b2) == 0");
+		}
+		
+		Integer i2 = 127;
+		if(b1.hashCode() == i2.hashCode()) {
+			System.out.println("b1.hashCode() == i2.hashCode(), b1.hashCode()=" + b1.hashCode());
+		}
+	}
+	
+	private void doubleEq() {
+		System.out.println("-----------------------------Double");
+		Double b1 = 127D;
+		Double b2 = 127D;
+		
+		if(b1.equals(b2)) {
+			System.out.println("b1.equals(b2)");
+		}
+		if(b1 == b2) {
+			System.out.println("b1 == b2");
+		}
+		if(b1.hashCode() == b2.hashCode()) {
+			System.out.println("b1.hashCode() == b2.hashCode()");
+		}
+		if(b1.compareTo(b2) == 0) {
+			System.out.println("b1.compareTo(b2) == 0");
+		}
+		
+		Integer i2 = 127;
+		if(b1.hashCode() == i2.hashCode()) {
+			System.out.println("b1.hashCode() == i2.hashCode(), b1.hashCode()=" + b1.hashCode());
+		}
+	}
+
+	private void autoPacking(){
+		System.out.println("-----------------------------Запаковка распаковка");
+		Integer i = 10;//автоматически запаковался
+		int i1 = i; //автоматически распаковался
+		int i2 = repacking(i);//автоматически распаковался
+		
+		int i3 = i++;//автоматически распаковался до значения
+		
+		Integer a1 = 129;
+		Integer b1 = a1;
+		if(b1 == a1) {
+			System.out.println("b1 == a1");
+		}
+		a1++;//распаковка и запаковка в новый Integer
+		if(b1 != a1) {
+			System.out.println("b1 != a1");
+		}
+		
+		Boolean b = true;//запаковка
+		if(b) {
+			System.out.println("распаковка");
+		}
+		
+		Integer i4 = 10;
+		Double d1 = 10.10;
+		d1 = i4 + d1;//аспаковка и запаковка в новый Double
+	}
+	
+	private int repacking(Integer a) {return a;}
 }
