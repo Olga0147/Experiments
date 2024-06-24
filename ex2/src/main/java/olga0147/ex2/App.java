@@ -17,7 +17,9 @@ public class App
     	Methods m = new Methods();
     	//m.run();
     	WrappedTypes wt = new WrappedTypes();
-    	wt.run();
+    	//wt.run();
+    	EnumRun er = new EnumRun();
+    	er.run();
     	
     	//System.out.println( "Hello World!" );
     }
