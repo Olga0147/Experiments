@@ -1,5 +1,7 @@
 package olga0147.ex2;
 
+import olga0147.ex2.annotations.Annotations;
+
 /**
  * Hello world!
  *
@@ -19,7 +21,9 @@ public class App
     	WrappedTypes wt = new WrappedTypes();
     	//wt.run();
     	EnumRun er = new EnumRun();
-    	er.run();
+    	//er.run();
+		Annotations a = new Annotations();
+		a.run();
     	
     	//System.out.println( "Hello World!" );
     }
